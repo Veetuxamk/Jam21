@@ -2,10 +2,10 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Veetu_Brick : MonoBehaviour
+public class Brick1_Script : MonoBehaviour
 {
-    
-    public GameObject Brickaruu;
+
+  
     private float timer;
 
     private void Start()
@@ -17,12 +17,11 @@ public class Veetu_Brick : MonoBehaviour
     {
         if (timer > 0)
         {
-             if (other.transform.CompareTag ("Ball"))
-             {
-                Object.Instantiate(Brickaruu, transform.position, Quaternion.identity);
+            if (other.transform.CompareTag("Ball"))
+            {
                 Destroy(this.gameObject);
-             }
+            }
         }
-       
+
     }
 }
