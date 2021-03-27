@@ -21,12 +21,10 @@ public class Brick_Generator : MonoBehaviour
     public int Spaceheight;
 
     // Find all enemies
-    private GameObject[] Enemies;
+    private int Enemies;
 
     // Random numbers
     private int Randomint;
-
-    private Vector2 Vector;
 
     // Start is called before the first frame update
     void Start()
@@ -37,40 +35,79 @@ public class Brick_Generator : MonoBehaviour
     void Update()
     {
         // Find all of the enemies
-        Enemies = GameObject.FindGameObjectsWithTag("Enemy");
+        Enemies = GameObject.FindGameObjectsWithTag("Enemy").Length;
 
         // if no enemies are found
-        if (Enemies == null) {
-            Randomint = Random.Range(0, 7); // generate random number 0-6 (i know it says 7, ignore it, this is just how random works)
+        if (Enemies == 0)
+        {
 
-            for (int y = Maxheight; y > 0; y = y - Spaceheight) {
+            for (int y = Maxheight; y > 0; y = y - Spaceheight)
+            {
                 for (int x = Maxwidth; x > 0; x = x - Spacewidth)
+                {
+                    Randomint = Random.Range(0, 7); // generate random number 0-6 (i know it says 7, ignore it, this is just how random works)
 
-                    Vector = ;
-
-                    switch (Randomint) {// instantiate a random Enemy
+                    switch (Randomint)
+                    {// instantiate a random Enemy
 
                         case 0:
                             break;
                         case 1:
-                            Instantiate(Basic_1, Vector,  )
+                            Instantiate(Basic_1, new Vector2(x, y), Quaternion.identity);
+                            Instantiate(Basic_1, new Vector2(-x, y), Quaternion.identity);
                             break;
                         case 2:
-                            Instantiate(Basic_2);
+                            Instantiate(Basic_2, new Vector2(x, y), Quaternion.identity);
+                            Instantiate(Basic_2, new Vector2(-x, y), Quaternion.identity);
                             break;
                         case 3:
-                            Instantiate(Basic_3);
+                            Instantiate(Basic_3, new Vector2(x, y), Quaternion.identity);
+                            Instantiate(Basic_3, new Vector2(-x, y), Quaternion.identity);
                             break;
                         case 4:
-                            Instantiate(Repulse_1);
+                            Instantiate(Repulse_1, new Vector2(x, y), Quaternion.identity);
+                            Instantiate(Repulse_1, new Vector2(-x, y), Quaternion.identity);
                             break;
                         case 5:
-                            Instantiate(Laser_1);
+                            Instantiate(Laser_1, new Vector2(x, y), Quaternion.identity);
+                            Instantiate(Laser_1, new Vector2(-x, y), Quaternion.identity);
                             break;
                         case 6:
-                            Instantiate(Durable_1);
+                            Instantiate(Durable_1, new Vector2(x, y), Quaternion.identity);
+                            Instantiate(Durable_1, new Vector2(-x, y), Quaternion.identity);
                             break;
                     }
+
+                    if(x == 1)// Instantiate something in the middle
+                    {
+                        Randomint = Random.Range(0, 7); // generate random number 0-6 (i know it says 7, ignore it, this is just how random works)
+
+                        switch (Randomint)
+                        {// instantiate a random Enemy
+
+                            case 0:
+                                break;
+                            case 1:
+                                Instantiate(Basic_1, new Vector2(0, y), Quaternion.identity);
+                                break;
+                            case 2:
+                                Instantiate(Basic_2, new Vector2(0, y), Quaternion.identity);
+                                break;
+                            case 3:
+                                Instantiate(Basic_3, new Vector2(0, y), Quaternion.identity);
+                                break;
+                            case 4:
+                                Instantiate(Repulse_1, new Vector2(0, y), Quaternion.identity);
+                                break;
+                            case 5:
+                                Instantiate(Laser_1, new Vector2(0, y), Quaternion.identity);
+                                break;
+                            case 6:
+                                Instantiate(Durable_1, new Vector2(0, y), Quaternion.identity);
+                                break;
+                        }
+                    }
+                }
             }
         }
     }

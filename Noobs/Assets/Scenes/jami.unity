@@ -152,16 +152,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9fc89d78780e7634593987d43fda6432, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Basic_1: {fileID: 0}
-  Basic_2: {fileID: 0}
-  Basic_3: {fileID: 0}
-  Repulse_1: {fileID: 0}
-  Laser_1: {fileID: 0}
-  Durable_1: {fileID: 0}
-  Maxwidth: 0
-  Maxheight: 0
-  Spacewidth: 0
-  Spaceheight: 0
+  Basic_1: {fileID: 1787977482120141240, guid: a8304938e474d8b43be6f49970062b6a, type: 3}
+  Basic_2: {fileID: 112268803667252666, guid: c55b27b7da7679d40b0fc5ed12778ea2, type: 3}
+  Basic_3: {fileID: 2669079474953416009, guid: ad0592ee66e8d6d439c92e94f3756bb3, type: 3}
+  Repulse_1: {fileID: 1290381175840729436, guid: 154d51de11962724cbf31d875d172485, type: 3}
+  Laser_1: {fileID: 417582567375190645, guid: a3dc6dcf48970c449aed79d06573c1ce, type: 3}
+  Durable_1: {fileID: 2148361434502582340, guid: 1af27727251dec649a88b718a767db67, type: 3}
+  Maxwidth: 6
+  Maxheight: 4
+  Spacewidth: 1
+  Spaceheight: 1
 --- !u!4 &757567246
 Transform:
   m_ObjectHideFlags: 0
