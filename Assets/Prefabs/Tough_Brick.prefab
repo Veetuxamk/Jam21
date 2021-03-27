@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 4690538250278480817}
   - component: {fileID: 4690538250278480822}
   - component: {fileID: -3504605089094565858}
+  - component: {fileID: -2219824128001938893}
   m_Layer: 0
   m_Name: Tough_Brick
   m_TagString: Enemy
@@ -123,3 +124,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Brickaruu: {fileID: 2953120565978152701, guid: fe61a36ae3945cc49971f75c4744c922, type: 3}
+--- !u!114 &-2219824128001938893
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4690538250278480823}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c1f54443282844440a633115053f8dd2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 1

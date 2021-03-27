@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 5074736065216777604}
   - component: {fileID: 325890646087189174}
   - component: {fileID: -4876729771541081214}
+  - component: {fileID: 4475801270537714849}
   m_Layer: 0
   m_Name: 'Repulsor_Brick '
   m_TagString: Untagged
@@ -123,3 +124,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Brickaruu: {fileID: 1268991585631389381, guid: 6705be0f536096f4ebc8c2055851d995, type: 3}
+--- !u!114 &4475801270537714849
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2390720955798988686}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c1f54443282844440a633115053f8dd2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 1
