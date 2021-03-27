@@ -237,6 +237,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 7
+  RScreenEdge: 11
+  LScreenEdge: -11
 --- !u!212 &800827447
 SpriteRenderer:
   m_ObjectHideFlags: 0
