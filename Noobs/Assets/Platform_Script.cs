@@ -5,8 +5,8 @@ using UnityEngine;
 public class Platform_Script : MonoBehaviour
 {
     public float speed;
-    public float RScreenEdge;
-    public float LScreenEdge;
+    public float RScreenEdge = 11;
+    public float LScreenEdge = -11;
     private void Update()
     {
         //Gets the inputs from Unitys Input manager
