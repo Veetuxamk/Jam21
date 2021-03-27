@@ -8,17 +8,17 @@ public class Brick_Generator : MonoBehaviour
     public GameObject Basic_1;
     public GameObject Basic_2;
     public GameObject Basic_3;
-    public GameObject Repulse_1;
-    public GameObject Laser_1;
+    /*public GameObject Repulse_1;
+    public GameObject Laser_1;*/
     public GameObject Durable_1;
 
     // Random number boundraries
-    public int Maxwidth;
-    public int Maxheight;
+    public float Maxwidth;
+    public float Maxheight;
 
     // The space in between the bricks
-    public int Spacewidth;
-    public int Spaceheight;
+    public float Spacewidth;
+    public float Spaceheight;
 
     // Find all enemies
     private int Enemies;
@@ -44,9 +44,9 @@ public class Brick_Generator : MonoBehaviour
         if (Enemies == 0)
         {
 
-            for (int y = Maxheight; y > 0; y = y - Spaceheight)
+            for (float y = Maxheight; y > 0; y = y - Spaceheight)
             {
-                for (int x = Maxwidth; x > 0; x = x - Spacewidth)
+                for (float x = Maxwidth; x > 0; x = x - Spacewidth)
                 {
                     Randomint = Random.Range(difficulty - 7, difficulty); // generate random number 0-6 (i know it says 7, ignore it, this is just how random works)
 
@@ -65,7 +65,7 @@ public class Brick_Generator : MonoBehaviour
                             Instantiate(Basic_2, new Vector2(x, y), Quaternion.identity);
                             Instantiate(Basic_2, new Vector2(-x, y), Quaternion.identity);
                             break;
-                        case 10: case 11: case 12: case 13: case 14: case 15: case 16:/*case 11: case 13: case 15: case 18: case 19: case 20:*/
+                        case 10: case 11: case 12: case 13:/*case 11: case 13: case 15: case 18: case 19: case 20:*/
                             Instantiate(Basic_3, new Vector2(x, y), Quaternion.identity);
                             Instantiate(Basic_3, new Vector2(-x, y), Quaternion.identity);
                             break;
@@ -76,14 +76,14 @@ public class Brick_Generator : MonoBehaviour
                         case 5:
                             Instantiate(Laser_1, new Vector2(x, y), Quaternion.identity);
                             Instantiate(Laser_1, new Vector2(-x, y), Quaternion.identity);
-                            break;
-                        case 6:
+                            break;*/
+                        case 14: case 15: case 16:/*case 6:*/
                             Instantiate(Durable_1, new Vector2(x, y), Quaternion.identity);
                             Instantiate(Durable_1, new Vector2(-x, y), Quaternion.identity);
-                            break;*/
+                            break;
                     }
 
-                    if(x == 1)// Instantiate something in the middle
+                    if(x <= 1.5)// Instantiate something in the middle
                     {
                         Randomint = Random.Range(difficulty - 7, difficulty); // generate random number
 
@@ -100,7 +100,7 @@ public class Brick_Generator : MonoBehaviour
                             case 3:/**/ case 7: case 8:/* case 10: case 12:*/
                                 Instantiate(Basic_2, new Vector2(0, y), Quaternion.identity);
                                 break;
-                            case 10: case 11: case 12: case 13: case 14: case 15: case 16:/*case 11: case 13: case 15: case 18: case 19: case 20:*/
+                            case 10: case 11: case 12: case 13:/*case 11: case 13: case 15: case 18: case 19: case 20:*/
                                 Instantiate(Basic_3, new Vector2(0, y), Quaternion.identity);
                                 break;
                             /*case 7: case 14:
@@ -108,13 +108,17 @@ public class Brick_Generator : MonoBehaviour
                                 break;
                             case 8: case 16:
                                 Instantiate(Laser_1, new Vector2(0, y), Quaternion.identity);
-                                break;
-                            case 9: case 17:
-                                Instantiate(Durable_1, new Vector2(0, y), Quaternion.identity);
                                 break;*/
+                            case 14: case 15: case 16: /*case 9: case 17:*/
+                                Instantiate(Durable_1, new Vector2(0, y), Quaternion.identity);
+                                break;
                         }
                     }
                 }
+            }
+            if (difficulty < 17)// after instantiating the bricks, increase difficulty
+            {
+                difficulty = difficulty++;
             }
         }
     }
