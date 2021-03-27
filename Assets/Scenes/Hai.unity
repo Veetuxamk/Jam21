@@ -193,6 +193,11 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &195576219 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2647745060414360658, guid: 3daa6225b72d97b4387ae40be582db5e, type: 3}
+  m_PrefabInstance: {fileID: 646838321}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &441040123
 GameObject:
   m_ObjectHideFlags: 0
@@ -335,8 +340,17 @@ PrefabInstance:
       propertyPath: m_IsTrigger
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4251819528643553369, guid: 3daa6225b72d97b4387ae40be582db5e, type: 3}
+      propertyPath: Brickaruu
+      value: 
+      objectReference: {fileID: 853328553}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3daa6225b72d97b4387ae40be582db5e, type: 3}
+--- !u!1 &853328553 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1268991585631389381, guid: 6705be0f536096f4ebc8c2055851d995, type: 3}
+  m_PrefabInstance: {fileID: 2061417626}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1125812677
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -344,6 +358,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: -4216202468752405418, guid: a19a34e70bc43c645be0a04b0fe31455, type: 3}
+      propertyPath: Brickaruu
+      value: 
+      objectReference: {fileID: 2953120565978152701, guid: fe61a36ae3945cc49971f75c4744c922, type: 3}
     - target: {fileID: 325890646087189174, guid: a19a34e70bc43c645be0a04b0fe31455, type: 3}
       propertyPath: m_IsTrigger
       value: 0
@@ -413,7 +431,7 @@ GameObject:
   - component: {fileID: 1424164360}
   m_Layer: 0
   m_Name: ball3
-  m_TagString: Untagged
+  m_TagString: Ball
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -533,6 +551,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   platform1: {fileID: 2055020508}
+  xPush: 2
+  yPush: 15
 --- !u!1001 &1574384637
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -592,6 +612,10 @@ PrefabInstance:
       propertyPath: m_IsTrigger
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8738532291518485870, guid: fe61a36ae3945cc49971f75c4744c922, type: 3}
+      propertyPath: Brickaruu
+      value: 
+      objectReference: {fileID: 195576219}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fe61a36ae3945cc49971f75c4744c922, type: 3}
 --- !u!1001 &1922037366
@@ -601,6 +625,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 4552058681430566553, guid: 4f2304ac640276c4a9009d6a0c8320d1, type: 3}
+      propertyPath: Brickaruu
+      value: 
+      objectReference: {fileID: 2103134643}
     - target: {fileID: 4690538250278480816, guid: 4f2304ac640276c4a9009d6a0c8320d1, type: 3}
       propertyPath: m_RootOrder
       value: 2
@@ -844,3 +872,8 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6705be0f536096f4ebc8c2055851d995, type: 3}
+--- !u!1 &2103134643 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2953120565978152701, guid: fe61a36ae3945cc49971f75c4744c922, type: 3}
+  m_PrefabInstance: {fileID: 1574384637}
+  m_PrefabAsset: {fileID: 0}

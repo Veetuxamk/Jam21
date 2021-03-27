@@ -4,18 +4,25 @@ using UnityEngine;
 
 public class Veetu_Brick : MonoBehaviour
 {
- 
-    // Update is called once per frame
-    void Update()
+    
+    public GameObject Brickaruu;
+    private float timer;
+
+    private void Start()
     {
-        
+        timer = Time.realtimeSinceStartup;
     }
 
     private void OnCollisionEnter2D(Collision2D other)
     {
-        if (other.transform.CompareTag ("Ball"))
+        if (timer < 1)
         {
-            Destroy(this.gameObject);
+             if (other.transform.CompareTag ("Ball"))
+             {
+                Object.Instantiate(Brickaruu, transform.position, Quaternion.identity);
+                Destroy(this.gameObject);
+             }
         }
+       
     }
 }
