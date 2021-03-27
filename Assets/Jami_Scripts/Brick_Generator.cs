@@ -38,7 +38,7 @@ public class Brick_Generator : MonoBehaviour
     void Update()
     {
         // Find all of the enemies
-        Enemies = GameObject.FindGameObjectsWithTag("Enemy").Length;
+        Enemies = GameObject.FindGameObjectsWithTag("Brick").Length;
 
         // if no enemies are found
         if (Enemies == 0)
@@ -55,9 +55,9 @@ public class Brick_Generator : MonoBehaviour
                      // We have stopped working on special units so some numbers have been 
                      // commented out so they can be quickly restored if work on them resumes
 
-                        case 4: case 5:/**/ case 9: /*case 6:*/
+                        case 0: case 1:/**/ case 2: /*case 6:*/
                             break;
-                        case 0: case 1: case 2:
+                        case 4: case 5: case 9:
                             Instantiate(Basic_1, new Vector2(x, y + 6), Quaternion.identity);
                             Instantiate(Basic_1, new Vector2(-x, y + 6), Quaternion.identity);
                             break;

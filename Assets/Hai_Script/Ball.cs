@@ -5,6 +5,7 @@ using UnityEngine;
 
 public class Ball : MonoBehaviour
 {
+    Rigidbody2D Rigidbody;
     // config param 
     [SerializeField] Platform_Script platform1;
     [SerializeField] float xPush = 2f;
@@ -29,10 +30,12 @@ public class Ball : MonoBehaviour
         {
             LockBallToPlatform();
             LaunchBall();
-        }
-        
-    }
 
+            
+        }
+       
+    }
+    
     private void LaunchBall()
     {
         if (Input.GetMouseButtonDown(0))

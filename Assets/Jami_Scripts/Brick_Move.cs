@@ -20,8 +20,8 @@ public class Brick_Move : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (x != 10) {
-            if (time - Time.realtimeSinceStartup < -2)
+        if (x != 20) {
+            if (time - Time.realtimeSinceStartup < -3)
             {
                     transform.Translate(Vector2.down * speed);
                     time = Time.realtimeSinceStartup;
