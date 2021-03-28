@@ -17,9 +17,11 @@ public class Veetu_Brick : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D other)
     {
+        FindObjectOfType<PlayerStats>().AddToScore();
         if (timer > 1)
         {
-             if (other.transform.CompareTag ("Ball"))
+            
+            if (other.transform.CompareTag ("Ball"))
              {
                 
                 Object.Instantiate(Brickaruu, transform.position, Quaternion.identity);

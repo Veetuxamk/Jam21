@@ -16,13 +16,14 @@ public class Brick1_Script : MonoBehaviour
 
     void OnCollisionEnter2D(Collision2D other)
     {
-        
 
+        FindObjectOfType<PlayerStats>().AddToScore();
         if (timer > 1)
         {
+            
             if (other.transform.CompareTag("Ball"))
             {
-               
+                
                 Destroy(this.gameObject);
             }
         }
