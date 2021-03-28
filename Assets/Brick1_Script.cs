@@ -23,7 +23,7 @@ public class Brick1_Script : MonoBehaviour
             
             if (other.transform.CompareTag("Ball"))
             {
-                Instantiate<ParticleSystem>(Particle);
+                Object.Instantiate(Particle, transform.position, Quaternion.identity);
                 Destroy(this.gameObject);
             }
         }
