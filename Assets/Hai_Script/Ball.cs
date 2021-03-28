@@ -24,6 +24,7 @@ public class Ball : MonoBehaviour
     void Start()
     {
         Bounce = GetComponent<AudioSource>();
+        
         platformToBallVector = transform.position - platform1.transform.position;
     }
 
