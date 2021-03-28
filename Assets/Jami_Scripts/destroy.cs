@@ -8,14 +8,14 @@ public class destroy : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        GameObject[] gos = GameObject.FindGameObjectsWithTag("Enemy");
+        GameObject[] gos = GameObject.FindGameObjectsWithTag("Brick");
     }
     
 
     // Update is called once per frame
     void Update()
     {
-        GameObject[] gos = GameObject.FindGameObjectsWithTag("Enemy");
+        GameObject[] gos = GameObject.FindGameObjectsWithTag("Brick");
 
         if (Input.GetKeyDown(KeyCode.Space))
         {
