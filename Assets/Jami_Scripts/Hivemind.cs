@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class Hivemind : MonoBehaviour
 {
+    private float Timer;
     private float moves = 0;
     private int amount;
     private Brick_Move[] swarm;
@@ -23,6 +24,8 @@ public class Hivemind : MonoBehaviour
         {
             if (moves - Time.realtimeSinceStartup < -3)
             {
+                Timer = Time.realtimeSinceStartup;
+
                 GetAllBricks();
 
                 moves = Time.realtimeSinceStartup;

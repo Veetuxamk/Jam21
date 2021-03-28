@@ -21,6 +21,9 @@ public class Brick_Move : MonoBehaviour
 
     public void Move()
     {
-        transform.Translate(Vector2.down * speed);
+        if (transform.position.y > -2)
+        {
+            transform.Translate(Vector2.down * speed);
+        }
     }
 }
