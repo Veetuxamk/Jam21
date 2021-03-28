@@ -29,9 +29,14 @@ public class Brick_Generator : MonoBehaviour
     // Difficulty level
     private int difficulty = 7;
 
+    private GameObject Hivemind;
+    private Hivemind Queen;
+
     // Start is called before the first frame update
     void Start()
     {
+        Hivemind = GameObject.FindGameObjectWithTag("Hivemind");
+        Queen = Hivemind.GetComponent<Hivemind>();
     }
 
     // Update is called once per frame
@@ -43,6 +48,7 @@ public class Brick_Generator : MonoBehaviour
         // if no enemies are found
         if (Enemies == 0)
         {
+            Queen.Restart();
 
             for (float y = Maxheight; y > 0; y = y - Spaceheight)
             {

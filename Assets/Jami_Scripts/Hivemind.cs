@@ -4,10 +4,10 @@ using UnityEngine;
 
 public class Hivemind : MonoBehaviour
 {
-    public float moves;
-    public int amount;
+    private float moves = 0;
+    private int amount;
     private Brick_Move[] swarm;
-    public GameObject[] bricks;
+    private GameObject[] bricks;
     
 
     // Start is called before the first frame update
@@ -19,7 +19,7 @@ public class Hivemind : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (moves != 17)
+        if (moves != 10)
         {
             if (moves - Time.realtimeSinceStartup < -3)
             {
@@ -45,5 +45,10 @@ public class Hivemind : MonoBehaviour
 
                 
     }
-    
+
+    public void Restart()
+    {
+        moves = 0;
+    }
+
 }

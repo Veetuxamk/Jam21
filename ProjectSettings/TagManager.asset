@@ -7,6 +7,7 @@ TagManager:
   - Enemy
   - Ball
   - Brick
+  - Hivemind
   layers:
   - Default
   - TransparentFX

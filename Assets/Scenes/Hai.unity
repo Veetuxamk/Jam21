@@ -150,7 +150,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: b86b1d8ea906e7649a62e6510a41f294, type: 3}
+  m_audioClip: {fileID: 8300000, guid: be7ca5efab116f8419a7965c41791d35, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 0.5
   m_Pitch: 1
@@ -1292,7 +1292,7 @@ GameObject:
   - component: {fileID: 1743217086}
   m_Layer: 0
   m_Name: Hivemind
-  m_TagString: Untagged
+  m_TagString: Hivemind
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1309,9 +1309,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7a23c3c3af868bf43a79f76ec5f9a451, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moves: 0
-  amount: 0
-  bricks: []
 --- !u!4 &1743217087
 Transform:
   m_ObjectHideFlags: 0
