@@ -5,6 +5,9 @@ using UnityEngine;
 
 public class Ball : MonoBehaviour
 {
+    AudioSource Bounce;
+    
+
     Rigidbody2D Rigidbody;
     // config param 
     [SerializeField] Platform_Script platform1;
@@ -20,6 +23,7 @@ public class Ball : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        Bounce = GetComponent<AudioSource>();
         platformToBallVector = transform.position - platform1.transform.position;
     }
 
@@ -50,5 +54,10 @@ public class Ball : MonoBehaviour
     {
         Vector2 platformPos = new Vector2(platform1.transform.position.x, platform1.transform.position.y);
         transform.position = platformPos + platformToBallVector;
+    }
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        Bounce.Play();
     }
 }
