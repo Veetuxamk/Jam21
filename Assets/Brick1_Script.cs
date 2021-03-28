@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class Brick1_Script : MonoBehaviour
 {
-    
-    
+
+    public ParticleSystem Particle;
     private float timer;
 
     void Start()
@@ -23,7 +23,7 @@ public class Brick1_Script : MonoBehaviour
             
             if (other.transform.CompareTag("Ball"))
             {
-                
+                Instantiate<ParticleSystem>(Particle);
                 Destroy(this.gameObject);
             }
         }

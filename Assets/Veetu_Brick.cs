@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Veetu_Brick : MonoBehaviour
 {
-    
+    public ParticleSystem Particles;
     public GameObject Brickaruu;
     private float timer;
 
@@ -23,7 +23,7 @@ public class Veetu_Brick : MonoBehaviour
             
             if (other.transform.CompareTag ("Ball"))
              {
-                
+                Object.Instantiate(Particles, transform.position, Quaternion.identity);
                 Object.Instantiate(Brickaruu, transform.position, Quaternion.identity);
                 Destroy(this.gameObject);
              }
